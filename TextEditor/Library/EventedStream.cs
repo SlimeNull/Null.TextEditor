@@ -1,23 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace TextEditor.Library
+namespace Null.Library.EventedStream
 {
     class ReadStreamEventArgs : EventArgs
     {
-        public byte[] buffer;
-        public int offset, count;
+        public byte[] Buffer;
+        public int Offset, Count;
 
         public bool Denied = false;
     }
     class WriteStreamEventArgs : EventArgs
     {
-        public byte[] buffer;
-        public int offset, count;
+        public byte[] Buffer;
+        public int Offset, Count;
 
         public bool Denied = false;
     }
@@ -27,7 +23,7 @@ namespace TextEditor.Library
     }
     public class SetStreamLengthEventArgs : EventArgs
     {
-        public long value;
+        public long Value;
 
         public bool Denied = false;
     }
@@ -70,9 +66,9 @@ namespace TextEditor.Library
             {
                 ReadStreamEventArgs args = new ReadStreamEventArgs()
                 {
-                    buffer = buffer,
-                    offset = offset,
-                    count = count
+                    Buffer = buffer,
+                    Offset = offset,
+                    Count = count
                 };
                 PreviewRead.Invoke(this, args);
                 if (args.Denied)
@@ -105,7 +101,7 @@ namespace TextEditor.Library
             {
                 SetStreamLengthEventArgs args = new SetStreamLengthEventArgs()
                 {
-                    value = value
+                    Value = value
                 };
                 PreviewSetLength.Invoke(this, args);
                 if (args.Denied)
@@ -121,9 +117,9 @@ namespace TextEditor.Library
             {
                 WriteStreamEventArgs args = new WriteStreamEventArgs()
                 {
-                    buffer = buffer,
-                    offset = offset,
-                    count = count
+                    Buffer = buffer,
+                    Offset = offset,
+                    Count = count
                 };
                 PreviewWrite.Invoke(this, args);
                 if (args.Denied)

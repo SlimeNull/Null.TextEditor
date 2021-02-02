@@ -1,5 +1,6 @@
 ﻿using Microsoft.Scripting.Hosting;
 using Microsoft.Win32;
+using IronPython.Hosting;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -18,7 +19,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TextEditor.Library;
-using TextEditor.Library.TriggerStream;
+using Null.Library.TriggerStream;
+using Microsoft.Scripting;
 
 namespace TextEditor
 {
@@ -37,7 +39,7 @@ namespace TextEditor
             TriggerStream triggerStream = new TriggerStream();
             triggerStream.PreviewWrite += TriggerStream_PreviewWrite;
 
-            engine = IronPython.Hosting.Python.CreateEngine();
+            engine = Python.CreateEngine();
             scope = engine.CreateScope();
             EngineInitialize();
             engine.Runtime.IO.SetOutput(triggerStream, Encoding.Default);
@@ -84,7 +86,7 @@ namespace TextEditor
             string qwq;
             try
             {
-                qwq = Encoding.Default.GetString(e.buffer, e.offset, e.count);
+                qwq = Encoding.Default.GetString(e.Buffer, e.Offset, e.Count);
                 Dispatcher.Invoke(()=>
                 {
                     OutputBox.AppendText(qwq);
@@ -115,7 +117,7 @@ namespace TextEditor
         Thread scriptThread;
         void RunScript(string src)
         {
-            ScriptSource thisSrc = engine.CreateScriptSourceFromString(src, Microsoft.Scripting.SourceCodeKind.File);
+            ScriptSource thisSrc = engine.CreateScriptSourceFromString(src, SourceCodeKind.File);
 
             if (scriptThread != null)
             {

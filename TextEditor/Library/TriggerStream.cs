@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace TextEditor.Library.TriggerStream
+namespace Null.Library.TriggerStream
 {
+    class WriteStreamEventArgs : EventArgs
+    {
+        public byte[] Buffer;
+        public int Offset, Count;
+    }
     class TriggerStream : Stream
     {
         public override bool CanRead => false;
@@ -38,9 +39,9 @@ namespace TextEditor.Library.TriggerStream
             if (PreviewWrite != null)
                 PreviewWrite.Invoke(this, new WriteStreamEventArgs()
                 {
-                    buffer = buffer,
-                    offset = offset,
-                    count = count,
+                    Buffer = buffer,
+                    Offset = offset,
+                    Count = count,
                 });
         }
         public event EventHandler<WriteStreamEventArgs> PreviewWrite;
