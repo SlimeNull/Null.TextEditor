@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32210.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextEditor", "TextEditor\TextEditor.csproj", "{8CBB53AB-F9E6-40F1-A707-9F7F57185092}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Null.PyNotepad", "Null.PyNotepad\Null.PyNotepad.csproj", "{FB76982C-5D58-42CF-AFF8-8442EC053811}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullLib.TextBoxEx", "NullLib.TextBoxEx\NullLib.TextBoxEx.csproj", "{E0C5A8AD-9EAE-4075-A6B4-C2D1D566E4D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForm", "TestForm\TestForm.csproj", "{D56053D1-BF97-4802-BBC4-815CD86BC809}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CBB53AB-F9E6-40F1-A707-9F7F57185092}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CBB53AB-F9E6-40F1-A707-9F7F57185092}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CBB53AB-F9E6-40F1-A707-9F7F57185092}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CBB53AB-F9E6-40F1-A707-9F7F57185092}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB76982C-5D58-42CF-AFF8-8442EC053811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB76982C-5D58-42CF-AFF8-8442EC053811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB76982C-5D58-42CF-AFF8-8442EC053811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB76982C-5D58-42CF-AFF8-8442EC053811}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0C5A8AD-9EAE-4075-A6B4-C2D1D566E4D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0C5A8AD-9EAE-4075-A6B4-C2D1D566E4D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0C5A8AD-9EAE-4075-A6B4-C2D1D566E4D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C5A8AD-9EAE-4075-A6B4-C2D1D566E4D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D56053D1-BF97-4802-BBC4-815CD86BC809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D56053D1-BF97-4802-BBC4-815CD86BC809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D56053D1-BF97-4802-BBC4-815CD86BC809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D56053D1-BF97-4802-BBC4-815CD86BC809}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7E6F8D0-7F6E-4299-B659-FF09DF9F60C6}
+	EndGlobalSection
+EndGlobal
