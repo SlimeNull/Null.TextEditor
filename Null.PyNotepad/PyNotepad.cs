@@ -48,6 +48,7 @@ namespace Null.PyNotepad
 
             lineNumber.DataBindings.Add(nameof(Visible), lineNumberToolStripMenuItem, nameof(lineNumberToolStripMenuItem.Checked));
             appStatus.DataBindings.Add(nameof(Visible), statusBarToolStripMenuItem, nameof(statusBarToolStripMenuItem.Checked));
+            textEditor.DataBindings.Add(nameof(textEditor.WordWrap), wordWrapToolStripMenuItem, nameof(wordWrapToolStripMenuItem.Checked));
 
             Text = AppFullName;
 
@@ -324,16 +325,6 @@ namespace Null.PyNotepad
         }
 
         /// <summary>
-        /// 切换行号显示
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void lineNumberToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            lineNumber.Visible ^= true;
-        }
-
-        /// <summary>
         /// 全选
         /// </summary>
         /// <param name="sender"></param>
@@ -453,12 +444,22 @@ namespace Null.PyNotepad
 
         private void statusBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            appStatus.Visible ^= true;
+            statusBarToolStripMenuItem.Checked ^= true;
+        }
+
+        /// <summary>
+        /// 切换行号显示
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void lineNumberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            wordWrapToolStripMenuItem.Checked ^= true;
         }
 
         private void wordWrapToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            textEditor.WordWrap ^= true;
+            wordWrapToolStripMenuItem.Checked ^= true;
         }
 
         private void findNextToolStripMenuItem_Click(object sender, EventArgs e)

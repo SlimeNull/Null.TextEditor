@@ -115,7 +115,7 @@ namespace Null.PyNotepad
             this.helpToolStripMenuItem});
             this.appMenu.Location = new System.Drawing.Point(0, 0);
             this.appMenu.Name = "appMenu";
-            this.appMenu.Size = new System.Drawing.Size(1392, 33);
+            this.appMenu.Size = new System.Drawing.Size(1392, 36);
             this.appMenu.TabIndex = 0;
             this.appMenu.Text = "menuStrip1";
             // 
@@ -132,7 +132,7 @@ namespace Null.PyNotepad
             this.toolStripSeparator2,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 30);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newToolStripMenuItem
@@ -225,7 +225,7 @@ namespace Null.PyNotepad
             this.encodingToolStripMenuItem,
             this.fontToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(58, 29);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(58, 30);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // undoToolStripMenuItem
@@ -408,7 +408,7 @@ namespace Null.PyNotepad
             this.wordWrapToolStripMenuItem,
             this.darkModeToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(65, 30);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // zoomToolStripMenuItem
@@ -491,7 +491,7 @@ namespace Null.PyNotepad
             this.pyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pythonWindowToolStripMenuItem});
             this.pyToolStripMenuItem.Name = "pyToolStripMenuItem";
-            this.pyToolStripMenuItem.Size = new System.Drawing.Size(84, 29);
+            this.pyToolStripMenuItem.Size = new System.Drawing.Size(84, 30);
             this.pyToolStripMenuItem.Text = "Python";
             // 
             // pythonWindowToolStripMenuItem
@@ -507,7 +507,7 @@ namespace Null.PyNotepad
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 30);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
@@ -607,9 +607,9 @@ namespace Null.PyNotepad
             // 
             this.lineNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.lineNumber.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lineNumber.Location = new System.Drawing.Point(0, 33);
+            this.lineNumber.Location = new System.Drawing.Point(0, 36);
             this.lineNumber.Name = "lineNumber";
-            this.lineNumber.Size = new System.Drawing.Size(15, 815);
+            this.lineNumber.Size = new System.Drawing.Size(15, 812);
             this.lineNumber.TabIndex = 2;
             // 
             // textEditor
@@ -624,9 +624,9 @@ namespace Null.PyNotepad
             this.textEditor.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textEditor.HideSelection = false;
             this.textEditor.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.textEditor.Location = new System.Drawing.Point(15, 33);
+            this.textEditor.Location = new System.Drawing.Point(15, 36);
             this.textEditor.Name = "textEditor";
-            this.textEditor.Size = new System.Drawing.Size(1377, 815);
+            this.textEditor.Size = new System.Drawing.Size(1377, 812);
             this.textEditor.TabIndex = 3;
             this.textEditor.Text = "";
             this.textEditor.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.textEditor_LinkClicked);
