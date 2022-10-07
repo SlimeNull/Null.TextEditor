@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Null.PyNotepad", "Null.PyNo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullLib.TextBoxEx", "NullLib.TextBoxEx\NullLib.TextBoxEx.csproj", "{E0C5A8AD-9EAE-4075-A6B4-C2D1D566E4D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForm", "TestForm\TestForm.csproj", "{D56053D1-BF97-4802-BBC4-815CD86BC809}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{E0C5A8AD-9EAE-4075-A6B4-C2D1D566E4D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0C5A8AD-9EAE-4075-A6B4-C2D1D566E4D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0C5A8AD-9EAE-4075-A6B4-C2D1D566E4D3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D56053D1-BF97-4802-BBC4-815CD86BC809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D56053D1-BF97-4802-BBC4-815CD86BC809}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D56053D1-BF97-4802-BBC4-815CD86BC809}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D56053D1-BF97-4802-BBC4-815CD86BC809}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,15 +3,34 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TextEditor"
-        mc:Ignorable="d" Loaded="Window_Loaded"
+        xmlns:local="clr-namespace:TextEditor" WindowStyle="None"
+        mc:Ignorable="d" Loaded="Window_Loaded" ResizeMode="NoResize"
         Title="Null.TextEditor" Height="650" Width="1024">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
             <RowDefinition/>
             <RowDefinition Height="55"/>
         </Grid.RowDefinitions>
         <Grid>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="PyEditor" FontSize="18"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Width="40" Background="Transparent" BorderBrush="Transparent" Content="X">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="BorderBrush" Value="Gray"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <Grid Margin="10, 0" Grid.Row="1">
             <Grid.Resources>
                 <Style TargetType="TextBox">
                     <Setter Property="Padding" Value="3,2"/>
@@ -20,26 +39,27 @@
             </Grid.Resources>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
+                <ColumnDefinition Width="3"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0" MinWidth="100">
-                <Grid Margin="8, 10, 5, 10">
+                <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <GroupBox Grid.Row="0" Header="文本编辑区域">
-                        <TextBox Name="TextSource" AcceptsReturn="True" TextChanged="TextSource_TextChanged" UndoLimit="10"/>
+                        <TextBox Name="TextSource" AcceptsReturn="True" TextChanged="TextSource_TextChanged" BorderThickness="0" FontFamily="SimHei" FontSize="16" UndoLimit="10"/>
                     </GroupBox>
                     <GroupBox Grid.Row="1" Header="变量名称">
-                        <TextBox Name="FieldName" TextChanged="FieldName_TextChanged" MaxLength="10"
+                        <TextBox Name="FieldName" TextChanged="FieldName_TextChanged" MaxLength="10" BorderThickness="0"
                         Padding="2, 0" VerticalContentAlignment="Center" Height="23" Text="txt"/>
                     </GroupBox>
                 </Grid>
             </Grid>
-            <GridSplitter Grid.Column="1" Width="3" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Stretch" ResizeDirection="Columns"/>
-            <Grid Grid.Column="1" MinWidth="100">
-                <Grid Margin="10, 10, 10, 10">
+            <GridSplitter Grid.Column="1" Background="Transparent" HorizontalAlignment="Stretch" ResizeDirection="Columns"/>
+            <Grid Grid.Column="2" MinWidth="100">
+                <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="2*"/>
                         <RowDefinition Height="Auto"/>
@@ -47,7 +67,7 @@
                     </Grid.RowDefinitions>
                     <GroupBox Grid.Row="0" Header="操作区">
                         <Grid>
-                            <TextBox Name="CodeBox" FontSize="14" AcceptsReturn="True" MinHeight="50"
+                            <TextBox Name="CodeBox" FontFamily="SimHei" FontSize="16" AcceptsReturn="True" MinHeight="50" BorderThickness="0"
                                  TextWrapping="NoWrap" UndoLimit="5" PreviewKeyDown="CodeBox_PreviewKeyDown"/>
                             <Button HorizontalAlignment="Right" VerticalAlignment="Bottom"
                             Width="70" Height="23" Margin="0, 0, 10, 10" Content="执行" PreviewMouseDown="Button_PreviewMouseDown" ToolTip="Ctrl + Enter"/>
@@ -56,14 +76,14 @@
                     <GridSplitter Grid.Row="1" Height="3" Background="Transparent" HorizontalAlignment="Stretch"/>
                     <GroupBox Grid.Row="2" Header="输出">
                         <Grid>
-                            <TextBox Name="OutputBox" IsUndoEnabled="False" IsReadOnly="True" TextChanged="OutputBox_TextChanged"
-                            MinHeight="50" UndoLimit="0"/>
+                            <TextBox Name="OutputBox" IsUndoEnabled="False" IsReadOnly="True" BorderThickness="0" TextChanged="OutputBox_TextChanged"
+                                     FontFamily="SimHei" FontSize="16" MinHeight="50" UndoLimit="0"/>
                         </Grid>
                     </GroupBox>
                 </Grid>
             </Grid>
         </Grid>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="2">
             <GroupBox Header="控制台" Margin="10, 0, 10, 10">
                 <GroupBox.Resources>
                     <Style TargetType="Button">
