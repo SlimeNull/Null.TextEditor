@@ -114,7 +114,7 @@ namespace Null.PyNotepad
                 BufferedGraphicsManager.Current.Allocate(lineNumber.CreateGraphics(), lineNumber.ClientRectangle))
             {
                 Graphics g = bufferedGraphics.Graphics;
-                Font font = new Font(Font.FontFamily, textEditor.Font.Size);
+                Font font = new Font(Font.FontFamily, textEditor.Font.Size * textEditor.ZoomFactor);
 
                 g.Clear(lineNumber.BackColor);
 
