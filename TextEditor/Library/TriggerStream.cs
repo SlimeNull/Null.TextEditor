@@ -22,10 +22,7 @@ namespace Null.Library.TriggerStream
 
         public override void Flush() { }
 
-        public override int Read(byte[] buffer, int offset, int count)
-        {
-            return 0;
-        }
+        public override int Read(byte[] buffer, int offset, int count) => 0;
 
         public override long Seek(long offset, SeekOrigin origin)
         {
